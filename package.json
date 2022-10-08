@@ -1,12 +1,15 @@
 {
-  "name": "@timsmith/root",
+  "name": "@api-fun/root",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start:main": "pnpm -F @project-name/main start",
-    "start:second": "pnpm -F @project-name/second start",
-    "start": "pnpm -r start",
+    "start:coffee": "pnpm -F @api-fun/coffee dev",
+    "start:colors": "pnpm -F @api-fun/colors dev",
+    "start:recipes": "pnpm -F @api-fun/recipes dev",
+    "start:styles": "pnpm -F @api-fun/styles start",
+    "start:all": "pnpm -r start",
+    "sass": "pnpm -F @api-fun/styles start",
     "update:all": "pnpm -r update -i -L",
     "clean": "find ./ -name node_modules -type d -exec rm -rf {} +"
   },
@@ -16,8 +19,5 @@
   "engines": {
     "node": ">=18.0.0",
     "pnpm": ">=7.9.5"
-  },
-  "dependencies": {
-    "just-kebab-case": "^4.1.1"
   }
 }
